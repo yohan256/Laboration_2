@@ -2,14 +2,15 @@
     box-sizing: border-box;
   }
 
-body {
+body, html {
     margin: 0;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
+    overflow: hidden;
 }
 
 .mainBody {
-    height: 100%;
+    min-height: 100%;
     width: 70%;
     background-color: grey;
     margin-left: auto;
@@ -17,12 +18,16 @@ body {
     display: flex;
 }
 
-.sideInfo {
+#closeBtn {
+    display: none;
+}
+
+#sideInfo {
     flex: 30%;
     min-width: 30%;
     padding: 20px;
     background-color: #333333;
-    color: white;   
+    color: white; 
 }
 
 #pictureFrame {
@@ -50,7 +55,7 @@ body {
 }
 
 .sideContent {
-    height: 80%;
+    min-height: 100%;
     padding: 10px;
 }
 
@@ -91,4 +96,106 @@ body {
     border-bottom: 1px solid black;
     padding-bottom: 5px;
     width: 18%;
+}
+
+#button2 {
+    display: none;
+}
+
+@media only screen and (max-width:1551px) {
+
+    #fullName {
+        background-color: #4a4a4a;  
+        padding: 5px;
+    }
+    #myName {
+        font-size: x-large;
+        margin: 0;
+    }
+    #FEDS {
+        font-size: medium;
+        margin: 0;
+    }
+
+    #contactInfo {
+        padding: 10px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+    }
+    
+    #extraInfo, #languages, #skills {
+        padding: 10px;
+        padding-bottom: 10px;
+        line-height: 30px;
+    }
+}
+
+@media only screen and (max-width:1300px) {
+    .mainBody {
+        min-height: 100%;
+        width: 100%;
+    }   
+}
+
+@media only screen and (max-width: 920px) {
+
+    #closeBtn {
+        display: block;
+    }
+
+    #closeBtn {
+
+        height: 20px;
+        width: 20px;
+        border:none;
+        border-radius: 3px;
+        outline:none;
+        background: darkgrey;
+        margin-right: 20px;
+        cursor:pointer;
+        float: right;
+    }
+
+    #button2 {
+        height: 20px;
+        width: 20px;
+        border-radius: 3px;
+        border:none;
+        outline:none;
+        background: darkgrey;
+        margin: 5px;
+        cursor:pointer;
+        float: left;
+        display: block;
+    }
+
+    #button2.active { left: 230px; }
+
+    #button2.active div { background-color: #343838; }
+
+    #sideInfo {
+        position: fixed;
+        z-index: 4;
+        overflow: auto;
+        top: 0px;
+        left: -275px;
+        width: 275px;
+        opacity: 0;
+        padding: 20px 0px;
+        height: 100%;
+        -webkit-transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+        transition: all 350ms cubic-bezier(0.6, 0.05, 0.28, 0.91);
+      }
+
+      #sideInfo.active {
+        left: 0px;
+        opacity: 1;
+      }
+    
+    .sideInfo_2 {
+        position: fixed;
+        overflow: auto;
+        height: 100%;
+    }
+
 }
