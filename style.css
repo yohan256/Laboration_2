@@ -1,0 +1,28 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+  }
+
+body {
+    margin: 0;
+}
+
+.mainBody {
+    height: 100%;
+    width: 70%;
+    background-color: grey;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+}
+
+.sideInfo {
+    flex: 30%;
+    min-width: 30%;
+    padding: 20px;
+}
+
+.sideInfo_2 {
+    flex: 70%;
+    min-width: 70%;
+    padding: 20px;
+}
