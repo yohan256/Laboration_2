@@ -1,2 +1,3 @@
 # Laboration_2
-Making interactive CV
+Making interactive CV with HTML, CSS and JS.
+
